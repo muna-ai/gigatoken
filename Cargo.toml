@@ -1,3 +1,9 @@
+# The `.cargo/config.toml` [unstable] opt-in for profile-rustflags only
+# applies when cargo runs inside this tree; declaring the feature here too
+# lets the manifest parse when gigatoken is consumed as a path dependency
+# (nightly cargo either way — the crate needs portable_simd).
+cargo-features = ["profile-rustflags"]
+
 [package]
 name = "gigatoken"
 version = "0.10.0"
