@@ -9,9 +9,13 @@ use memchr::memmem;
 use memmap2::Mmap;
 use std::path::Path;
 
+#[cfg(feature = "data")]
 pub(crate) mod decompress;
+#[cfg(feature = "data")]
 pub mod file_source;
+#[cfg(feature = "data")]
 pub mod jsonl;
+#[cfg(feature = "data")]
 pub mod parquet;
 
 // ---------------------------------------------------------------------------
